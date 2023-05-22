@@ -134,6 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588da1729ab91c985b6cf62c81492b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disadvantageColor: {fileID: 2100000, guid: b6a2d447c4bab5b328580a41a359aa68, type: 2}
+  perkColor: {fileID: 2100000, guid: f751b21ced8e94be49b31b64f73241df, type: 2}
 --- !u!54 &7591552844232557089
 Rigidbody:
   m_ObjectHideFlags: 0
