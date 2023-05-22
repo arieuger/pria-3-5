@@ -6,7 +6,7 @@ using System.Collections;
 public class GameManager : NetworkBehaviour {
 
     public static GameManager Instance;
-    public List<Material> materials; // 0,1 Colores de inicio - 2,3 vermello e verde
+    public List<Material> materials;
 
     void Awake() {
         if (Instance == null) Instance = this;
