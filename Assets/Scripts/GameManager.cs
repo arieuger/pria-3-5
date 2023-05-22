@@ -20,13 +20,13 @@ public class GameManager : NetworkBehaviour {
     private IEnumerator PerkCoroutine() {
         while (true) {
             // Espera entre inicialización de perks
-            // Recorremos todos os clientes e escollemos un ao azar
+            // Escollemos un cliente ao azar
             ulong clientId = NetworkManager.Singleton.ConnectedClientsIds[Random.Range(0,NetworkManager.Singleton.ConnectedClientsList.Count)];
             Debug.Log("Client ID: " + clientId);
             yield return new WaitForSeconds(10f);
             
             // Espera duración de perk
-            // Cambiamos a cor (e almacenamos a previa para recuperala despois)
+            // Enviamos a chamada ao método ClientRpc
             Player selectedPlayer = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(clientId).GetComponent<Player>();
             selectedPlayer.SetPerkClientRpc(Random.Range(0,2) == 0);
             yield return new WaitForSeconds(5f);

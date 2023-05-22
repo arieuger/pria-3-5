@@ -45,7 +45,7 @@ public class Player : NetworkBehaviour {
 
     [ServerRpc]
     void InitializeServerRpc() {
-        ColorIndex.Value = -1;  // Así sempre se executará o método "OnColorChanged" de inicio
+        ColorIndex.Value = -1;  // Así sempre se executará o método "OnColorChanged" no inicio
         transform.position = new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
         ColorIndex.Value = Random.Range(0,2);
     }
